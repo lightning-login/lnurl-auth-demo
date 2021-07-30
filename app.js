@@ -1,5 +1,5 @@
 const express = require('express');
-const LnurlAuth = require('../index');
+const LnurlAuth = require('passport-lnurl-auth');
 const passport = require('passport');
 const session = require('express-session');
 
