@@ -50,13 +50,9 @@ app.use(passport.authenticate('lnurl-auth'));
 
 app.get('/', function(req, res) {
 	if (!req.user) {
-		// return res.send('You are not authenticated. To login go <a href="/login">here</a>.');
 		return res.render('index', { title: 'Login with Lightning!' })
-		// return
-		// return res.redirect('/login');
 	}
 	console.log(req.user)
-	// res.send('Logged-in as ' + req.user.id);
 	res.render('authenticated', { title: 'Logged in', userid: req.user.id })
 });
 
