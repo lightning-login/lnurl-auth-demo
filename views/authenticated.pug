@@ -1,0 +1,17 @@
+html
+  head
+    title #{title}
+    link(rel='stylesheet' href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+    style
+      include style.css
+  body
+    div#content
+      div.wrap
+        h1 Success! ⚡✅
+        p That was easy, right?!
+        p You are now known as 
+          code= userid
+        p This is you:
+        img(src="https://robohash.org/" + userid + "?set=set3")
+        button.lightning.btn.btn-primary
+          a(href="https://github.com/fiatjaf/awesome-lnurl") Learn more!

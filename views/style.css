@@ -1,0 +1,59 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: #222;
+	margin: 0;
+
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+h1 {
+	margin: 0 0 6.15rem 0;
+}
+p {
+	font-weight: 100;
+	line-height: 150%;
+	margin: 0 0 1rem 0;
+}
+p.bottom {
+	margin-top: 8em;
+}
+#content {
+	display: flex;
+	height: 100%;
+	text-align: center;
+}
+.wrap {
+	width: 80%;
+	max-width: 24rem;
+	align-self: center;
+	margin: 0 auto;
+}
+
+.lightning {
+  width: 100%;
+  max-width: 250px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+	font-weight: bold;
+	font-size: 0.9em;
+
+	color: #212529;
+	border-color: #fada5e;
+	background-color: #fada5e;
+}
+
+.lightning > a {
+	color: #212529;
+	text-decoration: none;
+}
+
+.lightning:hover,
+.lightning:active,
+.lightning:visited {
+	color: #212529;
+	border-color: orange;
+	background-color: #fada5e;
+}
