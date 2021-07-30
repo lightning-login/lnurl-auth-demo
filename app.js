@@ -6,8 +6,8 @@ const session = require('express-session');
 const app = express();
 
 const config = {
-	host: 'localhost',
-	port: 3000,
+	host: process.env.HOST || 'localhost',
+	port: process.env.PORT || 3000,
 	url: null,
 };
 
@@ -74,7 +74,7 @@ app.get('/login',
 	})
 );
 
-const server = app.listen(process.env.PORT || config.port, config.host, function() {
+const server = app.listen(config.port, function() {
 	console.log('Server listening at ' + config.url);
 });
 
