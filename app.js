@@ -6,9 +6,9 @@ const session = require('express-session');
 const app = express();
 
 const config = {
-	host: 'localhost',
+	host: process.env.HOST || 'localhost',
 	port: process.env.PORT || 3000,
-	url: null,
+	url: process.env.URL || null,
 };
 
 if (!config.url) {
