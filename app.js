@@ -1,7 +1,7 @@
 const express = require('express');
 const LnurlAuth = require('passport-lnurl-auth');
 const passport = require('passport');
-const session = require('cookie-session');
+const session = require('express-session');
 
 const app = express();
 
