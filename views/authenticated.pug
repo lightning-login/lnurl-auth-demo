@@ -9,10 +9,14 @@ html
       div.wrap
         h1 Success! ⚡✅
         p That was easy, right?!
-        p You are now known as 
+        p You are now known as
+          | 
           code= userid
         p This is you:
         img(src="https://robohash.org/" + userid + "?set=set3")
+        p
+          a.small(href="https://robohash.org/") A robot?
+
         a.lightning.btn.btn-primary(href="/learn") Learn more!
         p
           a.secondary.btn.btn-secondary(href="/logout") Logout

@@ -79,6 +79,11 @@ p.bottom {
 	background-color: #222;
 }
 
+a.small {
+	font-size: smaller;
+	color: #666;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
