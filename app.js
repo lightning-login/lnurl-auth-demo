@@ -66,6 +66,7 @@ app.get('/login',
 	},
 	new LnurlAuth.Middleware({
 		callbackUrl: 'https://lightninglogin.live/login',
+		callbackUrl: 'https://da99b6c7ab40.eu.ngrok.io/login',
 		cancelUrl: config.url
 	})
 );
@@ -78,6 +79,12 @@ app.get('/logout',
 			return res.redirect('/');
 		}
 		next();
+	}
+);
+
+app.get('/learn',
+	function(req, res, next) {
+	res.render('learn')
 	}
 );
 
