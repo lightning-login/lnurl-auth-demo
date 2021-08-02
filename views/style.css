@@ -30,7 +30,9 @@ p.bottom {
 	margin: 0 auto;
 }
 
-.lightning {
+.btn {
+	margin-top: 5px;
+
   width: 100%;
   max-width: 250px;
   justify-content: center;
@@ -39,21 +41,37 @@ p.bottom {
 
 	font-weight: bold;
 	font-size: 0.9em;
+}
 
+.btn-primary {
 	color: #212529;
 	border-color: #fada5e;
 	background-color: #fada5e;
 }
+.btn-primary:active {
+	background-color: #fada5e;
+}
 
-.lightning > a {
+.btn a {
 	color: #212529;
 	text-decoration: none;
 }
-
-.lightning:hover,
-.lightning:active,
-.lightning:visited {
+.btn:hover,
+.btn:active,
+.btn:visited {
 	color: #212529;
 	border-color: orange;
 	background-color: #fada5e;
+}
+
+.btn-secondary {
+	border: 1px solid #222;
+	background: none;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited {
+	color: white;
+	border-color: darkgray;
+	background-color: #222;
 }

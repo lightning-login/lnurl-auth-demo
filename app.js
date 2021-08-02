@@ -70,6 +70,17 @@ app.get('/login',
 	})
 );
 
+app.get('/logout',
+	function(req, res, next) {
+		if (req.user) {
+			// Already authenticated.
+			req.session.destroy();
+			return res.redirect('/');
+		}
+		next();
+	}
+);
+
 const server = app.listen(config.port, function() {
 	console.log('Server listening at ' + config.url);
 });
