@@ -65,7 +65,7 @@ app.get('/login',
 		next();
 	},
 	new LnurlAuth.Middleware({
-		callbackUrl: 'https://lnurl-auth-demo.herokuapp.com/login',
+		callbackUrl: 'https://lightninglogin.live/login',
 		cancelUrl: config.url
 	})
 );
