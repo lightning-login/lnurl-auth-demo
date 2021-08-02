@@ -25,9 +25,14 @@ p.bottom {
 }
 .wrap {
 	width: 80%;
-	max-width: 28rem;
+	max-width: 29rem;
 	align-self: center;
 	margin: 0 auto;
+}
+.docuwrap {
+	width: 80%;
+	max-width: 29rem;
+	margin: 3em auto;
 }
 
 .btn {
@@ -63,7 +68,7 @@ p.bottom {
 
 .btn-secondary {
 	color: gray;
-	border: 1px solid #222;
+	border: 1px solid #333;
 	background: none;
 }
 .btn-secondary:hover,

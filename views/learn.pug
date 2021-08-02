@@ -6,12 +6,14 @@ html
       include style.css
   body
     div#content
-      div.wrap
+      div.docuwrap
         h1 How does this ⚡ magic work?
         p
           | The "Login with Lightning" button is powered by LNURL-auth, a
           | lightweight authentication protocol that is easy to use, easy to
-          | implement, and respects the user's privacy.
+          | implement, and
+          |
+          b respects the user's privacy.
 
 
         hr
@@ -73,12 +75,18 @@ html
           | .
 
         hr
-        p
-          a.btn.btn-secondary(href="/") Back
+        h3 Additional Resources
 
-        hr
-        h5 Additional Resources
+        p The following resources should be helpful if you want to learn more.
 
         ul
           li
+            a(href="https://github.com/fiatjaf/lnurl-rfc") LNURL: Lightning Network UX protocol
+          li
+            a(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth Specification
+          li
             a(href="https://xn--57h.bigsun.xyz/lnurl-auth.html") LNURL-Auth explained
+
+        hr
+        p
+          a.btn.btn-secondary(href="/") Back
