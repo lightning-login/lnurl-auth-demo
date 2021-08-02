@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/dergigi/lnurl-auth-demo#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "passport": "^0.4.1",
