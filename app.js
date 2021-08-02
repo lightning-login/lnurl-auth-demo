@@ -66,7 +66,7 @@ app.get('/login',
 	},
 	new LnurlAuth.Middleware({
 		callbackUrl: 'https://lightninglogin.live/login',
-		cancelUrl: config.url
+		cancelUrl: 'https://lightninglogin.live'
 	})
 );
 
