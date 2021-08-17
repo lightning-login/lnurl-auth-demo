@@ -2,4 +2,4 @@
 
 This is a simple demo site to showcase how damn cool it is to log in with Lightning. ⚡
 
-The main purpose is to spread awareness and let people know that this exists and not only works, but works really well already. This whole project was inspired by [stacker.news], so shout-out to @huumn. Also shout-out to @fiatjaf for his work on LNURL and for curating the [awesome-lnurl](https://github.com/fiatjaf/awesome-lnurl) list.
+The main purpose is to spread awareness and let people know that this exists and not only works, but works really well already. This whole project was inspired by [stacker.news](https://stacker.news/), so shout-out to @huumn. Also shout-out to @fiatjaf for his work on LNURL and for curating the [awesome-lnurl](https://github.com/fiatjaf/awesome-lnurl) list.
