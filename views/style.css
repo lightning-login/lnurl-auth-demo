@@ -11,12 +11,20 @@ h1 {
 	margin: 0 0 6.15rem 0;
 }
 p {
-	font-weight: 100;
+	font-weight: normal;
 	line-height: 150%;
 	margin: 0 0 1rem 0;
 }
-p.bottom {
+p.bottom-heading {
 	margin-top: 8em;
+}
+@media only screen and (min-width: 768px) {
+	p {
+		font-weight: 200;
+	}
+	p.bottom-heading {
+		font-weight: 300;
+	}
 }
 #content {
 	display: flex;
@@ -34,26 +42,17 @@ p.bottom {
 	max-width: 29rem;
 	margin: 3em auto;
 }
-
 .btn {
-	margin-top: 5px;
-
-  width: 100%;
-  max-width: 250px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+	width: 100%;
+	max-width: 250px;
 	font-weight: bold;
 	font-size: 0.9em;
 }
-
 .btn-primary {
 	color: #212529;
 	border-color: #fada5e;
 	background-color: #fada5e;
 }
-
 .btn a {
 	color: #212529;
 	text-decoration: none;
@@ -65,7 +64,6 @@ p.bottom {
 	border-color: orange;
 	background-color: #fada5e;
 }
-
 .btn-secondary {
 	color: gray;
 	border: 1px solid #333;
@@ -78,14 +76,24 @@ p.bottom {
 	border-color: darkgray;
 	background-color: #222;
 }
-
 a.small {
 	font-size: smaller;
 	color: #666;
 }
-
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+.colored-link {
+	color: #fada5e;
+}
+.colored-link:active,
+.colored-link:visited,
+.colored-link:hover {
+	color: #fada5e;
+}
+.padded-button {
+	margin-top: 16px;
+	margin-bottom: 16px;
 }
