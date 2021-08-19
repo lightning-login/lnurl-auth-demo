@@ -53,7 +53,7 @@ app.get('/', function(req, res) {
 		return res.render('index', { title: 'Login with Lightning!' })
 	}
 	console.log(req.user)
-	res.render('authenticated', { title: 'Logged in', userid: "034435c242451d47bd0b03f18bc5f36082975f0376165905019fa33fbed6747749" })
+	res.render('authenticated', { title: 'Logged in', userid: req.user.id })
 });
 
 app.get('/login',
