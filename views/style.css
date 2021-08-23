@@ -1,91 +1,68 @@
 html, body {
-	width: 100%;
-	height: 100%;
 	color: #fff;
-	background: #222;
-	margin: 0;
+	background: #111;
 
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
-h1 {
-	margin: 0 0 6.15rem 0;
-}
-p {
-	font-weight: 100;
-	line-height: 150%;
-	margin: 0 0 1rem 0;
-}
-p.bottom {
-	margin-top: 8em;
-}
-#content {
-	display: flex;
-	height: 100%;
-	text-align: center;
-}
-.wrap {
-	width: 80%;
-	max-width: 29rem;
-	align-self: center;
-	margin: 0 auto;
-}
-.docuwrap {
-	width: 80%;
-	max-width: 29rem;
-	margin: 3em auto;
-}
 
-.btn {
-	margin-top: 5px;
-
-  width: 100%;
-  max-width: 250px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.btn-lightning {
+	width: 100%;
+	max-width: 250px;
 
 	font-weight: bold;
 	font-size: 0.9em;
-}
 
-.btn-primary {
+	color: #212529;
+	border-color: #fada5e;
+	background-color: #fada5e;
+}
+.btn-lightning:hover,
+.btn-lightning:active,
+.btn-lightning:link,
+.btn-lightning:visited {
 	color: #212529;
 	border-color: #fada5e;
 	background-color: #fada5e;
 }
 
-.btn a {
-	color: #212529;
-	text-decoration: none;
+.btn-learn {
+	width: 100%;
+	max-width: 250px;
+
+	font-weight: bold;
+	font-size: 0.9em;
+
+	color: #111;
+	border-color: #d0d0d0;
+	background-color: #d0d0d0;
 }
-.btn:hover,
-.btn:active,
-.btn:visited {
-	color: #212529;
-	border-color: orange;
-	background-color: #fada5e;
+.btn-learn:hover,
+.btn-learn:active,
+.btn-learn:link,
+.btn-learn:visited {
+	color: #111;
+	border-color: #d0d0d0;
+	background-color: #d0d0d0;
 }
 
-.btn-secondary {
-	color: gray;
-	border: 1px solid #333;
-	background: none;
+a.highlight-link:link,
+a.highlight-link:visited,
+a.highlight-link:hover,
+a.highlight-link:active {
+	color: #fada5e;
 }
-.btn-secondary:hover,
-.btn-secondary:active,
-.btn-secondary:visited {
+
+.gray-text {
+	color: #626262 !important;
+}
+
+.divider {
 	color: white;
-	border-color: darkgray;
-	background-color: #222;
 }
 
-a.small {
-	font-size: smaller;
-	color: #666;
+.question {
+	text-align: left;
 }
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.answer {
+	text-align: left;
 }

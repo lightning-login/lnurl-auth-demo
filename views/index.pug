@@ -1,5 +1,6 @@
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content="https://lightninglogin.live/")
     meta(name="twitter:creator" content="@dergigi")
@@ -11,19 +12,33 @@ html
     style
       include style.css
   body
-    div#content
-      div.wrap
-        h1 Hi there 👋⚡
-        a.lightning.btn.btn-primary(href="/login")
-          | <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 10.1907L8.48754 21L12.6726 12.7423H5L14.6157 3L11.5267 10.2835L19 10.1907Z" fill="black"></path></svg>
-          | Login with Lightning
-        p.bottom Don't have a wallet?
-        p Try
-          a(href="https://breez.technology/")  Breez
-          |
-          | or
-          a(href="https://phoenix.acinq.co/")  Phoenix
-          |
-          | or one of the wallets listed
-          a(href="https://github.com/fiatjaf/awesome-lnurl#wallets")  here
-          | .
+    div.container.text-center.my-5
+      div.row
+        div.col
+          h1.display-3.font-weight-bold
+            p 👋⚡️
+            p Hi there,
+          h3 passwords are broken. Lightning is not.
+      div.row
+        div.col.my-5.py-5
+          a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-lightning(href="/login")
+            | <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 10.1907L8.48754 21L12.6726 12.7423H5L14.6157 3L11.5267 10.2835L19 10.1907Z" fill="black"></path></svg>
+            | Login with Lightning
+      div.row
+        div.col
+          h6 Don't have a wallet?
+          div.gray-text
+            p Try&nbsp;
+              a.highlight-link(href="https://breez.technology/") Breez
+              | , or &nbsp;
+              a.highlight-link(href="https://phoenix.acinq.co/") Phoenix
+              | , or one of the wallets listed&nbsp;
+              a.highlight-link(href="https://github.com/fiatjaf/awesome-lnurl#wallets") here
+              | .
+          h6 What is this?
+          div.gray-text
+            p It's&nbsp;
+              a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth
+              | . Learn more&nbsp;
+              a.highlight-link(href="/learn") here
+              | .

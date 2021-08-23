@@ -83,7 +83,7 @@ app.get('/logout',
 
 app.get('/learn',
 	function(req, res, next) {
-	res.render('learn')
+		res.render('learn')
 	}
 );
 

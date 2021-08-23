@@ -1,22 +1,29 @@
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     title #{title}
     link(rel='stylesheet' href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
     style
       include style.css
   body
-    div#content
-      div.wrap
-        h1 Success! ⚡✅
-        p That was easy, right?!
-        p You are now known as
-          | 
-          code= userid
-        p This is you:
-        img(src="https://robohash.org/" + userid + "?set=set3")
-        p
-          a.small(href="https://robohash.org/") A robot?
-
-        a.lightning.btn.btn-primary(href="/learn") Learn more!
-        p
-          a.secondary.btn.btn-secondary(href="/logout") Logout
+    div.container.text-center.my-5
+      div.row
+        div.col
+          h1.display-3.font-weight-bold
+            p ⚡️
+            p Success!
+          h3 That was easy, right?!
+      div.row
+        div.col.my-5.py-5
+          p You are now known as:
+          code #{userid}
+          div
+            img(src="https://robohash.org/" + userid + "?set=set3")
+          p
+            a.small.gray-text(href="https://robohash.org/") A robot?!
+      div.row
+        div.col
+          div
+            a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-lightning(href="/learn") Learn more!
+          div.pt-2
+            a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-learn(href="/logout") Logout
