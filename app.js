@@ -27,6 +27,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use('/images', express.static('public'))
 
 const map = {
 	user: new Map(),
