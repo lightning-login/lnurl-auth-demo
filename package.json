@@ -29,6 +29,7 @@
     "express-session": "^1.17.2",
     "passport": "^0.4.1",
     "passport-lnurl-auth": "^1.3.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0"
   }
 }

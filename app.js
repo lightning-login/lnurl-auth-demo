@@ -2,6 +2,8 @@ const express = require('express');
 const LnurlAuth = require('passport-lnurl-auth');
 const passport = require('passport');
 const session = require('express-session');
+const favicon = require('serve-favicon')
+const path = require('path')
 
 const app = express();
 
@@ -15,13 +17,14 @@ if (!config.url) {
 	config.url = 'http://' + config.host + ':' + config.port;
 }
 
-app.set("view engine", "pug");
+app.set('view engine', 'pug');
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(session({
 	secret: '12345',
 	resave: true,
 	saveUninitialized: true,
 }));
-
 app.use(passport.initialize());
 app.use(passport.session());
 
