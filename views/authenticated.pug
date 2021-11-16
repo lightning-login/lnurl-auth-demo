@@ -13,17 +13,24 @@ html
             p ⚡️
             p Success!
           h3 That was easy, right?!
-      div.row
-        div.col.my-5.py-5
+      div.row.my-5
+        div.col
           p You are now known as:
           code #{userid}
           div
             img(src="https://robohash.org/" + userid + "?set=set3")
           p
             a.small.gray-text(href="https://robohash.org/") A robot?!
-      div.row
+      div.row.mb-5.pb-5
         div.col
           div
             a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-lightning(href="/learn") Learn more!
           div.pt-2
             a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-learn(href="/logout") Logout
+      div.row
+        div.col
+          p.social-text This website is free and open-source.
+          a(href="https://github.com/seetee-io/lnurl-auth-demo")
+            img.social-icon(src="images/github.png")
+          a(href="https://twitter.com/Seetee_io")
+            img.social-icon(src="images/twitter.png")
