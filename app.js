@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(session({
 	secret: '12345',
-	resave: true,
+	resave: false,
 	saveUninitialized: true,
 }));
 app.use(passport.initialize());
