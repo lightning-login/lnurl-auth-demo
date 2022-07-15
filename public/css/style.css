@@ -46,7 +46,26 @@ html, body {
 }
 
 .btn-lightning:hover:not(.no-animation) svg {
+  -webkit-animation: flash .7s ease-in forwards;
+  -moz-animation: flash .7s ease-in forwards;
+  -o-animation: flash .7s ease-in forwards;
   animation: flash .7s ease-in forwards;
+}
+
+@-webkit-keyframes flash {
+  50% {
+    color: var(--ghost-white);
+  }
+}
+@-moz-keyframes flash {
+  50% {
+    color: var(--ghost-white);
+  }
+}
+@-o-keyframes flash {
+  50% {
+    color: var(--ghost-white);
+  }
 }
 
 @keyframes flash {
@@ -54,6 +73,7 @@ html, body {
     color: var(--ghost-white);
   }
 }
+
 .btn-lightning:active,
 .btn-lightning:link,
 .btn-lightning:visited {
@@ -85,10 +105,18 @@ html, body {
   background-color: var(--bdazzled-blue);
 }
 
+/* Login Page */
+
+.qr-instructions {
+  color:  var(--sonic-silver);
+}
+
 /* Authenticated Page */
 
 .authenticated-userid {
   color: var(--pacific-blue);
+  word-break: break-all;
+  text-align: center;
 }
 
 .authenticated-robot {

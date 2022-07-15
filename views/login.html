@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="{{refreshSeconds}}">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+
+        <title>Login with Lightning!</title>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <div class="container">
+                <div class="row mt-4 mt-md-5 py-5">
+                    <div class="col mt-md-5">
+                        <div class="text-center">
+                            <div class="display-4 mb-2">👋⚡️</div>
+                            <h1 class="fw-bold display-2">Hi there!</h1>
+                            <div class="fs-3">
+                                <span class="d-block d-sm-inline-flex">Passwords are broken.</span>
+                                <span class="d-block d-sm-inline-flex">Lightning is not.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3 py-md-4">
+                    <div class="col d-flex flex-column justify-content-center align-items-center gap-4">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <a id="qrcode" href="{{href}}"><img src="{{dataUri}}"></a>
+                            <div class="pt-2 qr-instructions">
+                                Scan this QR code with your lightning wallet, or:
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column gap-2">
+                            <a class="d-flex d-md-none btn btn-primary btn-lightning no-animation" href="{{href}}">
+                                <div class="me-1">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 17.5h3.005a1.5 1.5 0 001.5-1.5V8a1.5 1.5 0 00-1.5-1.5H15A1.5 1.5 0 0116.5 8v8a1.5 1.5 0 01-1.5 1.5z"></path><rect width="12" height="11" x="4.5" y="6.5" rx="1.5"></rect><circle cx="8.75" cy="11.75" r="1.25"></circle>
+                                    </svg>
+                                </div>
+                                <div>Open your Lightning Wallet</div>
+                            </a>
+                            <a class="btn btn-secondary" href="{{cancelUrl}}">
+                                <div>Go back</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 mt-md-3 py-3 py-md-4">
+                    <div class="col d-flex justify-content-center">
+                        <div class="text-center">
+                            <h5>What is this?</h5>
+                            <p>
+                                It's <a href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md">LNURL-auth</a>.
+                                Learn more <a href="/learn">here</a>.
+                            </p>
+                            <h5>Don't have a wallet?</h5>
+                            <p>
+                                Try <a href="https://breez.technology/">Breez</a>, <a href="https://phoenix.acinq.co/">Phoenix</a>, or one of the wallets listed <a href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/README.md#lnurl-documents">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://github.com/seetee-io/lnurl-auth-demo">
+                            <img class="social-icon" src="static/img/github.png" />
+                        </a>
+                        <a href="https://twitter.com/Seetee_io">
+                            <img class="social-icon" src="static/img/twitter.png" />
+                        </a>
+                    </div>
+                    <div>
+                        This website is free and open-source.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
