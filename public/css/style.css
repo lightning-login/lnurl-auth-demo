@@ -67,6 +67,7 @@ html, body {
     color: var(--ghost-white);
   }
 }
+
 @keyframes flash {
   50% {
     color: var(--ghost-white);
