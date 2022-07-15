@@ -1,0 +1,9 @@
+mixin hero(emojis, title, subtitle)
+  div.row.mt-4.mt-md-5.py-5
+    div.col.mt-md-5
+      div.text-center
+        div.display-4.mb-2 #{emojis}
+        h1.fw-bold.display-2 #{title}
+        if block
+          div.fs-3 #{subtitle}
+            block

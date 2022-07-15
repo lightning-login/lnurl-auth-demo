@@ -19,7 +19,7 @@ if (!config.url) {
 
 app.set('view engine', 'pug');
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, 'public/img', 'favicon.ico')))
 app.use(session({
 	secret: '12345',
 	resave: false,
@@ -27,7 +27,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use('/images', express.static('public'))
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 const map = {
 	user: new Map(),
@@ -70,7 +70,7 @@ app.get('/login',
 	},
 	new LnurlAuth.Middleware({
 		callbackUrl: 'https://lightninglogin.live/login',
-		cancelUrl: 'https://lightninglogin.live'
+		cancelUrl: 'https://lightninglogin.live/'
 	})
 );
 

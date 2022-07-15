@@ -1,51 +1,33 @@
-html
-  head
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="twitter:card" content="summary_large_image")
-    meta(name="twitter:site" content="https://lightninglogin.live/")
-    meta(name="twitter:creator" content="@dergigi")
-    meta(name="twitter:title" content="Lightning Login")
-    meta(name="twitter:description" content="Passwords are broken. Lightning is not.")
-    meta(name="twitter:image" content="https://dergigi.com/assets/images/bitcoin/lnurl-auth-twitter-card.png")
-    title #{title}
-    link(rel='stylesheet' href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
-    style
-      include style.css
-  body
-    div.container.text-center.my-5
-      div.row
-        div.col
-          h1.display-3.font-weight-bold
-            p 👋⚡️
-            p Hi there!
-          h3 Passwords are broken. Lightning is not.
-      div.row
-        div.col.my-5.py-5
-          a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-lightning(href="/login")
-            | <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 10.1907L8.48754 21L12.6726 12.7423H5L14.6157 3L11.5267 10.2835L19 10.1907Z" fill="black"></path></svg>
-            | Login with Lightning
-      div.row.mb-5.pb-5
-        div.col
-          h6 Don't have a wallet?
-          div.gray-text
-            p Try&nbsp;
-              a.highlight-link(href="https://breez.technology/") Breez
-              | , or &nbsp;
-              a.highlight-link(href="https://phoenix.acinq.co/") Phoenix
-              | , or one of the wallets listed&nbsp;
-              a.highlight-link(href="https://github.com/fiatjaf/awesome-lnurl#wallets") here
-              | .
-          h6 What is this?
-          div.gray-text
-            p It's&nbsp;
-              a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth
-              | . Learn more&nbsp;
-              a.highlight-link(href="/learn") here
-              | .
-      div.row
-        div.col
-          p.social-text This website is free and open-source.
-          a(href="https://github.com/seetee-io/lnurl-auth-demo")
-            img.social-icon(src="images/github.png")
-          a(href="https://twitter.com/Seetee_io")
-            img.social-icon(src="images/twitter.png")
+extends layout.pug
+include mixins/hero
+
+block content
+  +hero('👋⚡️', 'Hi there!')
+    span.d-block.d-sm-inline-flex Passwords are broken.
+    span.d-none.d-sm-inline-flex &nbsp;
+    span.d-block.d-sm-inline-flex Lightning is not.
+
+  div.row.py-3.py-md-4
+    div.col.d-flex.justify-content-center
+        a.btn.btn-primary.btn-lightning(href="/login")
+          div
+            <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 10.1907L8.48754 21L12.6726 12.7423H5L14.6157 3L11.5267 10.2835L19 10.1907Z"></path></svg>
+          div Login with Lightning
+
+  div.row.mt-2.mt-md-3.py-3.py-md-4
+      div.col.d-flex.justify-content-center
+        div.text-center
+          h5 What is this?
+          p It's&nbsp;
+            a(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth
+            | . Learn more&nbsp;
+            a(href="/learn") here
+            | .
+          h5 Don't have a wallet?
+          p Try&nbsp;
+            a(href="https://breez.technology/") Breez
+            | ,&nbsp;
+            a(href="https://phoenix.acinq.co/") Phoenix
+            | , or one of the wallets listed&nbsp;
+            a(href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/README.md#lnurl-documents") here
+            | .

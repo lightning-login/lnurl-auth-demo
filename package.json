@@ -4,7 +4,7 @@
   "description": "Small demo site to show off LNURL-auth",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "nodemon": "^2.0.19",
     "passport": "^0.4.1",
     "passport-lnurl-auth": "^1.3.0",
     "pug": "^3.0.2",
