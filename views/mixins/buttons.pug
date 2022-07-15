@@ -1,0 +1,8 @@
+mixin buttons(primary, secondary)
+  div.row.mt-2.mt-md-3.py-3.py-md-4
+    div.col.d-flex.justify-content-center
+      div.d-flex.flex-column.justify-content-center.gap-2
+        if primary
+            a.btn.btn-primary.btn-lightning.no-animation(href=primary.link) #{primary.text}
+        if secondary
+            a.btn.btn-primary.btn-secondary(href=secondary.link) #{secondary.text}

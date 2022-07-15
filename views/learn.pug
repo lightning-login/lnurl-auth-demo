@@ -1,91 +1,82 @@
-html
-  head
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title How does this ⚡ magic work?
-    link(rel='stylesheet' href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
-    style
-      include style.css
-  body
-    div.container.text-center.my-5
-      div.row
-        div.col
-          h1.display-3.font-weight-bold
-            p ⚡️
-            p Magic
-          h3 How does it work?
-      div.row.justify-content-center
-        div.col-md-6.my-5.py-5
-           p
-            | The #[i Login with Lightning] button is powered by LNURL-auth, a
-            | lightweight authentication protocol that is easy to use, easy to
-            | implement, and #[em respects the user's privacy].
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          h3.question What is LNURL-auth?
-          p.answer
-            a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth
-            |
-            | is a generic authentication protocol. It authenticates the
-            | user using digital signatures, which means that the user needs to have a
-            | public-private key pair. Thanks to the rising popularity of
-            |
-            a.highlight-link(href="https://bitcoiner.guide/wallet/lightning/") lightning wallets
-            | , more and more users are in possession of and have easy access
-            | to such keys.
-          p.answer
-            | Consequently, users are identified by their public keys,
-            | nothing else. The protocol does not require any other identifying
-            | information such as passwords, emails, usernames, or similar.
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          h3.question How does it work?
-          p.answer
-            | In short: the seed of your bitcoin wallet is used to generate secret
-            | authentication keys. As soon as you want to log in to a website, the
-            | website will pose a specific challenge that you can only solve with
-            | your secret authentication key.
-          p.answer
-            | A more technical explanation can be found&nbsp;
-            a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/04.md") here
-            | .
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          h3.question Are identities persistent?
-          p.answer
-            | Yes, but it does not transfer across sites or wallets.
-          p.answer
-            | Because a different authentication key is generated for every domain,
-            | you will be identified by a different public key for every site. Your
-            | identities can not be associated across domains.
-          p.answer
-            | However, as long as you log in to a site with the same wallet, you will
-            | have the same identity.
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          h3.question Who uses it?
-          p.answer
-            | A list of services that make use of LNURL-auth is maintained&nbsp;
-            a.highlight-link(href="https://github.com/fiatjaf/awesome-lnurl#lnurl-auth") here
-            | .
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          h3.question Additional Resources
-          p.answer The following resources should be helpful if you want to learn more.
-            ul.answer
-              li
-                a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc") LNURL: Lightning Network UX protocol
-              li
-                a.highlight-link(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth Specification
-              li
-                a.highlight-link(href="https://xn--57h.bigsun.xyz/lnurl-auth.html") LNURL-Auth explained
-      div.row.mb-5.justify-content-center
-        div.col-md-6
-          div.py-5
-            a.btn.btn-primary.button-icon.d-inline-flex.justify-content-center.align-items-center.btn-learn(href="/") Back
-      div.row
-        div.col
-          p.social-text This website is free and open-source.
-          a(href="https://github.com/seetee-io/lnurl-auth-demo")
-            img.social-icon(src="images/github.png")
-          a(href="https://twitter.com/Seetee_io")
-            img.social-icon(src="images/twitter.png")
+extends layout.pug
+include mixins/hero
+include mixins/buttons
+
+mixin section(heading, isFirst=false)
+  if isFirst
+    div.row.py-5.d-flex.justify-content-center
+      div.col-md-8.col-lg-6
+        div.px-1
+          h3=heading
+          block
+  else
+    div.row.pb-5.d-flex.justify-content-center
+      div.col-md-8.col-lg-6
+        div.px-1
+          h3=heading
+          block
+
+block content
+  +hero('🪄⚡️', 'Magic?!')
+    span This is how it works.
+
+  div.row.py-5.d-flex.justify-content-center
+    div.col-10.col-md-8.col-lg-5
+      div.text-center
+        | The #[i Login with Lightning] button is powered by LNURL-auth, a
+        | lightweight authentication protocol that is easy to use, easy to
+        | implement, and #[em respects the user's privacy].
+
+  +section('What is LNURL-auth?', true)
+    p
+      a(href="https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-auth.md") LNURL-auth
+      |
+      | is a generic authentication protocol. It authenticates the
+      | user using digital signatures, which means that the user needs to have a
+      | public-private key pair. Thanks to the rising popularity of
+      |
+      a(href="https://bitcoiner.guide/wallet/lightning/") lightning wallets
+      | , more and more users are in possession of and have easy access
+      | to such keys.
+    p
+      | Consequently, users are identified by their public keys,
+      | nothing else. The protocol does not require any other identifying
+      | information such as passwords, emails, usernames, or similar.
+
+  +section('How does it work?')
+    p
+      | In short: the seed of your bitcoin wallet is used to generate secret
+      | authentication keys. As soon as you want to log in to a website, the
+      | website will pose a specific challenge that you can only solve with
+      | your secret authentication key.
+    p
+      | A more technical explanation can be found&nbsp;
+      a(href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/04.md") here
+      | .
+
+  +section('Are identities persistent?')
+    p
+      | Yes, but it does not transfer across sites or wallets.
+    p
+      | Because a different authentication key is generated for every domain,
+      | you will be identified by a different public key for every site. Your
+      | identities can not be associated across domains.
+    p
+      | However, as long as you log in to a site with the same wallet, you will
+      | have the same identity.
+
+  +section('Who uses it?')
+    p
+      | A list of services that make use of LNURL-auth is maintained&nbsp;
+      a(href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/README.md#services") here
+      | .
+
+  +section('Additional Resources')
+    p The following resources should be helpful if you want to learn more.
+      ul
+        li
+          a(href="https://github.com/fiatjaf/lnurl-rfc") LNURL: Lightning Network UX protocol
+        li
+          a(href="https://github.com/fiatjaf/lnurl-rfc/blob/luds/04.md") LNURL-auth Specification
+
+  +buttons(undefined, {link: "/", text: "Back"})
