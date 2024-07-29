@@ -11,3 +11,11 @@ Try out the site on [LightningLogin.Live](https://lightninglogin.live/)
 ### Buttons
 
 Button assets are to be found in the [lightning-buttons](https://github.com/seetee-io/lightning-buttons) repository.
+
+### Should I Use This?
+
+Well, maybe. Maybe not. You should probably look into [nostr](https://nostr.com/).
+
+### Nostr?
+
+Yes, nostr. [NIP-07](https://nostr-nips.com/nip-07) in particular.
